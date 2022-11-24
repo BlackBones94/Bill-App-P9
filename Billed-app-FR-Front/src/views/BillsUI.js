@@ -6,6 +6,7 @@ import { formatDate } from '../app/format.js'
 import Actions from './Actions.js'
 
 const row = (bill) => {
+  console.log(bill)
   return (`
     <tr>
       <td>${bill.type}</td>
@@ -23,11 +24,14 @@ const row = (bill) => {
 //  tri des dates dans bills
 
 const rows = (data) => {
+  console.log(data)
   return (data && data.length) ? data 
     .sort((a,b) => {return ((a.date < b.date) ? 1 : -1)})
     .map(bill => row(bill))
     .join("") : ""
 }
+
+
 
 export default ({ data: bills, loading, error }) => {
   

@@ -36,7 +36,7 @@ export default class NewBill {
      if (!regexImgAccepted.test(file.name)){
        this.document.querySelector(`input[data-testid="file"]`).value = "";
        alert("Format non autoriser")
- 
+      
      }else{
  
     

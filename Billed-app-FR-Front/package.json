@@ -3,6 +3,10 @@
     "test": "jest --coverage --noStackTrace --silent"
   },
   "jest": {
+    "collectCoverage":true,
+    "coverageReporters":["lcov"],
+    "coverageDirectory":"./output/code-coverage/",
+    "reporters":["./node_modules/jest-html-reporter"],
     "verbose": false,
     "setupFiles": [
       "./setup-jest.js"
